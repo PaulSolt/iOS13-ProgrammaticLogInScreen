@@ -136,7 +136,6 @@ class ViewController: UIViewController {
             topImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             topImageView.heightAnchor.constraint(equalToConstant: imageHeight),
             topImageView.bottomAnchor.constraint(equalTo: bottomView.topAnchor),
-            
             topImageView.widthAnchor.constraint(equalTo: view.widthAnchor),
             
             // Bottom Stack View
