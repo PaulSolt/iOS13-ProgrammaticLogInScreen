@@ -9,12 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let textFieldHeight = 40
+    let buttonHeight = 50
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+        setUpViews()
+        setUpConstraints()
+
     }
-
-
+    
+    func setUpViews() {
+        
+    }
+    
+    func setUpConstraints() {
+        
+    }
 }
 
