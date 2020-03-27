@@ -25,10 +25,10 @@ class ViewController: UIViewController {
         let scrollView = UIScrollView(frame: .zero) // will resize with Auto Layout
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.contentSize = self.view.frame.size
-        scrollView.alwaysBounceVertical = true
-        scrollView.contentInsetAdjustmentBehavior = .never
-        scrollView.keyboardDismissMode = .interactive
-//        scrollView.backgroundColor = .orange
+        scrollView.alwaysBounceVertical = true // make it feel like a good iOS app
+        scrollView.contentInsetAdjustmentBehavior = .never // prevents the inset from making it bounce
+        scrollView.keyboardDismissMode = .interactive   // Can dismiss
+    //        scrollView.backgroundColor = .orange
         return scrollView
     }()
 
