@@ -13,6 +13,7 @@
 		BD9C9FD5242E5C8200DED04B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9C9FD3242E5C8200DED04B /* Main.storyboard */; };
 		BD9C9FD7242E5C8400DED04B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD9C9FD6242E5C8400DED04B /* Assets.xcassets */; };
 		BD9C9FDA242E5C8400DED04B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD9C9FD8242E5C8400DED04B /* LaunchScreen.storyboard */; };
+		BD9C9FE2242E67B400DED04B /* PaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9C9FE1242E67B400DED04B /* PaddedTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BD9C9FD6242E5C8400DED04B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD9C9FD9242E5C8400DED04B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD9C9FDB242E5C8400DED04B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD9C9FE1242E67B400DED04B /* PaddedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				BD9C9FCD242E5C8200DED04B /* AppDelegate.swift */,
 				BD9C9FCF242E5C8200DED04B /* SceneDelegate.swift */,
 				BD9C9FD1242E5C8200DED04B /* ViewController.swift */,
+				BD9C9FE1242E67B400DED04B /* PaddedTextField.swift */,
 				BD9C9FD3242E5C8200DED04B /* Main.storyboard */,
 				BD9C9FD6242E5C8400DED04B /* Assets.xcassets */,
 				BD9C9FD8242E5C8400DED04B /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				BD9C9FD2242E5C8200DED04B /* ViewController.swift in Sources */,
 				BD9C9FCE242E5C8200DED04B /* AppDelegate.swift in Sources */,
 				BD9C9FD0242E5C8200DED04B /* SceneDelegate.swift in Sources */,
+				BD9C9FE2242E67B400DED04B /* PaddedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,14 +25,17 @@ class ViewController: UIViewController {
         let scrollView = UIScrollView(frame: .zero) // will resize with Auto Layout
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.contentSize = self.view.frame.size
-        scrollView.backgroundColor = .orange
+        scrollView.alwaysBounceVertical = true
+        scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.keyboardDismissMode = .interactive
+//        scrollView.backgroundColor = .orange
         return scrollView
     }()
 
     lazy var contentView: UIView = {
         let contentView = UIView()
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.backgroundColor = .yellow
+//        contentView.backgroundColor = .yellow
         return contentView
     }()
 
@@ -49,7 +52,7 @@ class ViewController: UIViewController {
     lazy var bottomView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+//        view.backgroundColor = .green
         return view
     }()
 
@@ -57,10 +60,40 @@ class ViewController: UIViewController {
        let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.spacing = 20
+        
+        stackView.isLayoutMarginsRelativeArrangement = true
+        stackView.directionalLayoutMargins = .init(top: 20, leading: 20, bottom: 20, trailing: 20)
         
         return stackView
     }()
     
+    lazy var nameTextField: PaddedTextField = {
+        let textField = PaddedTextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.backgroundColor = .white
+        textField.placeholder = "Name"
+        return textField
+    }()
+
+    lazy var passwordTextField: PaddedTextField = {
+        let textField = PaddedTextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.backgroundColor = .white
+        textField.placeholder = "Password"
+        textField.isSecureTextEntry = true
+        return textField
+    }()
+    
+    lazy var button: UIButton = {
+        let button = UIButton(type: .system)
+        button.setBackgroundImage(UIImage(named: "Button"), for: .normal)
+        button.setTitle("Log In", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 24)
+        button.adjustsImageWhenHighlighted = true
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +114,9 @@ class ViewController: UIViewController {
         bottomView.addSubview(stackView)
         
         // Add all form elements to the StackView
-        
+        stackView.addArrangedSubview(nameTextField)
+        stackView.addArrangedSubview(passwordTextField)
+        stackView.addArrangedSubview(button)
     }
     
     func setUpConstraints() {
@@ -116,8 +151,9 @@ class ViewController: UIViewController {
             stackView.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor),
             stackView.bottomAnchor.constraint(equalTo: bottomView.bottomAnchor),
 
-            
-        
+            nameTextField.heightAnchor.constraint(equalToConstant: textFieldHeight),
+            passwordTextField.heightAnchor.constraint(equalToConstant: textFieldHeight),
+            button.heightAnchor.constraint(equalToConstant: buttonHeight),
         ])
     }
 }
